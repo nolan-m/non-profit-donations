@@ -3,6 +3,8 @@ NonProfit::Application.routes.draw do
 
   resources :companies
   resources :users
+  resources :accounts
+  resources :charges
 
   root to: 'welcome#index'
 
