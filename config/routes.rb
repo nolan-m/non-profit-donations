@@ -1,10 +1,11 @@
 NonProfit::Application.routes.draw do
   devise_for :users
 
-  resources :companies
+  resources :companies do
+    resources :charges
+  end
   resources :users
-  resources :accounts
-  resources :charges
+
 
   root to: 'welcome#index'
 

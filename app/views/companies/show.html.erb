@@ -1,0 +1,11 @@
+<h1 class="company"><%= @company.name %></h1>
+<%= render '/charges/donate_form'%>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('h1.company').click(function() {
+    $('#payment-form').show()
+    });
+  });
+
+</script>
