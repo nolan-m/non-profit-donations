@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NonProfit</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="navbar navbar-default">
+    <div class="navbar-collapse collapse navbar-responsive-collapse">
+      <ul class="nav navbar-nav">
+        <% if current_user %>
+        <li><%= link_to current_user.email, user_path(current_user) %></li>
+        <% end %>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <% if !current_user %>
+          <li><%= link_to "Sign up", new_user_registration_path %></li>
+          <li><%= link_to "Sign in", new_user_session_path %></li>
+        <% else %>
+          <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete  %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+    <div class='container'>
+  <%= flash[:notice] %>
+  <%= flash[:error] %>
+  <%= yield %>
+    </div>
+
+</body>
+</html>
