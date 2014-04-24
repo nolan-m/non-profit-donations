@@ -1,14 +1,12 @@
 
-  <form action="/charges" method="POST" id="payment-form">
+  <form action="/companies/<%= "#{@company.id}" %>/charges/" method="POST" id="payment-form">
     <span class="payment-errors"></span>
-
     <div class="form-row">
       <label>
         <span>Card Number</span>
         <input type="text" size="20" value="4242424242424242" data-stripe="number"/>
       </label>
     </div>
-
     <div class="form-row">
       <label>
         <span>CVC</span>

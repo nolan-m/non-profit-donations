@@ -1,1 +1,8 @@
 <h2> <%= @user.email %> </h2>
+
+<h4>Your Donations:</h4>
+<ul>
+  <% @user.donations.each do |donation| %>
+    <li><%= Company.find(donation.company_id).name %> @ <%= number_to_currency(donation.donation_amt) %> on <%= donation.created_at.strftime("%m/%d/%Y") %> </li>
+    <% end %>
+</ul>

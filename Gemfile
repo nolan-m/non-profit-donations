@@ -11,6 +11,7 @@ gem 'bootstrap-sass'
 gem 'rest-client'
 gem 'devise'
 gem 'stripe'
+gem 'jquery-turbolinks'
 
 
 group :development do

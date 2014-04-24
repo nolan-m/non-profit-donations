@@ -18,6 +18,9 @@ class ChargesController < ApplicationController
         :card => token,
         :description => current_user.email
       )
+      donation = Donation.create(:user_id => current_user.id, :company_id => params[:company_id], :donation_amt => (amount/100) )
+      flash[:notice] = "Thank you for the donation"
+      redirect_to company_path(donation.company_id)
     rescue Stripe::CardError => e
       # The card has been declined
     end
