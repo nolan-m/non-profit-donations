@@ -12,6 +12,7 @@ gem 'rest-client'
 gem 'devise'
 gem 'stripe'
 gem 'jquery-turbolinks'
+gem 'rails_12factor'
 
 
 group :development do
