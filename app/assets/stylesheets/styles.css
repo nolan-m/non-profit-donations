@@ -1,6 +1,28 @@
+
+body {
+  background-image: url('background.jpg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 #payment-form {
   display:none;
 }
 div.profile {
  margin: 10px;
+}
+
+.container {
+	background-color: white;
+	padding-bottom: 30px;
+	margin-bottom: 20px;
+}
+
+#company_short, #company_name {
+	width: 300px;
+}
+#company_description {
+	height: 300px;
+	width: 300px;
 }

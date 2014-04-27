@@ -1,13 +1,12 @@
+<h1>Non-Profit Donation Center</h1>
 
-
-<h1>Donation Center</h1>
-<h3>Donation is the greatest nation</h3>
-
-
-<p>Please visit a non-profit's page to donate</p>
-
+<h4>Please visit a non-profit's page to donate</h4>
   <% @companies.each do |company| %>
     <%= render '/welcome/company', :object => company %>
   <% end %>
 
 
+<div class='col-md-12'>
+	<hr>
+	<h5>Please Note: This site is for demostration purposes.  No donations will be made.</h5>
+</div>

@@ -10,11 +10,13 @@ class CompaniesController < ApplicationController
 
   def create
     @company=Company.new(company_params)
+    @company.total_donation = 0
     if @company.save
-    flash[:notice] = 'Company added'
-    redirect_to company_path(@company)
+      
+      flash[:notice] = 'Company added'
+      redirect_to company_path(@company)
     else
-    render 'new'
+      render 'new'
     end
   end
 
@@ -38,7 +40,7 @@ class CompaniesController < ApplicationController
 
 private
   def company_params
-    params.require(:company).permit(:name)
+    params.require(:company).permit(:name, :short, :description)
   end
 
 end

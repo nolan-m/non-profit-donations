@@ -1,9 +1,6 @@
 <h1 class="company"><%= @company.name %> <small>Click to Donate!</small></h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a eros vitae tellus lacinia blandit sed ullamcorper justo. Quisque egestas sollicitudin turpis sed ultrices. Praesent dapibus sit amet justo at cursus. Cras tempus feugiat elementum. Sed sollicitudin magna et sem eleifend, id semper urna sollicitudin. Morbi enim mauris, congue ut porta eu, dictum eu diam. Sed quis malesuada turpis, vitae mattis nunc. In hac habitasse platea dictumst. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis sapien diam, tincidunt a suscipit quis, consequat ut purus. Maecenas hendrerit, urna eu commodo vulputate, tellus ipsum sodales tortor, sed vehicula nibh enim et mi. Nulla non purus gravida, adipiscing purus non, gravida magna. Suspendisse ut tellus fermentum, sollicitudin arcu sed, dignissim elit. Praesent suscipit, enim nec iaculis dignissim, eros libero mattis nunc, non tristique sem enim eu dolor. Nullam at adipiscing leo.</p>
-<p>
-Phasellus sodales nisi urna, at posuere justo venenatis eget. Nunc gravida eleifend sapien, semper condimentum diam semper non. Aenean laoreet, nisl id ornare ullamcorper, neque nibh sagittis dui, vel porta urna eros ut elit. Cras id est vulputate lacus hendrerit pretium. Donec vel orci a mi tincidunt lobortis. Morbi sit amet leo nec nulla tincidunt elementum vel vitae mauris. Aliquam erat volutpat.
-</p>
-</h5>
+<h4>Total Raised:  <%= number_to_currency(@company.total_donation) %></h4>
+<%= @company.description %>
 
 <hr>
 <div class='col-md-6'>

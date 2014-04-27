@@ -8,7 +8,7 @@
 
   <script type="text/javascript">
     // This identifies your website in the createToken call below
-    Stripe.setPublishableKey('pk_test_9qjZvJqz0QDBQNfGfdOw9wo7');
+    Stripe.setPublishableKey('pk_test_TSF1GBhZiUdpS3V40J20dDy6');
 
     var stripeResponseHandler = function(status, response) {
       var $form = $('#payment-form');
@@ -46,9 +46,9 @@
   <div class="navbar navbar-default">
     <div class="navbar-collapse collapse navbar-responsive-collapse">
       <ul class="nav navbar-nav">
-        <% if current_user %>
         <li><%= link_to "Donate", root_path %></li>
-        <li><%= link_to current_user.email, user_path(current_user) %></li>
+        <% if current_user %>
+        <li><%= link_to "Your Past Donations", user_path(current_user) %></li>
         <li><%= link_to "Add Non-Profit", new_company_path %></li>
         <% end %>
       </ul>
@@ -68,6 +68,5 @@
   <%= flash[:error] %>
   <%= yield %>
     </div>
-
 </body>
 </html>

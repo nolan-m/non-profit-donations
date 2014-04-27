@@ -1,6 +1,13 @@
 
   <form action="/companies/<%= "#{@company.id}" %>/charges/" method="POST" id="payment-form">
     <span class="payment-errors"></span>
+
+    <div class="form-row">
+      <label>
+        <span>Email</span>
+        <input type="text" name="email"/>
+      </label>
+    </div>
     <div class="form-row">
       <label>
         <span>Card Number</span>
