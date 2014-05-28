@@ -2,12 +2,13 @@
 
 http://non-profit-donations.herokuapp.com/
 
-* Make a website where users can choose non-profits to make donations to.
+* Current non-profits are displayed on the main page.
+* Users can choose non-profits to make donation using the Stripe API.
+* Registered users can add their Non profit of choice to the site which allows other visitors to donate.
 
-* To start off with, create CRUD/L functionality for non-profits.
 
-* Now, let users choose a non-profit to donate to. To do this, use the Stripe API. Read the documentation on how to build a form with Stripe, and then how to charge a card after the number has been submitted to Stripe in exchange for a token. When you're testing, make sure to use the magic testing numbers so you don't need to use a real credit card! Also, if you wish, feel free to use the Stripe gem rather than making HTTP requests manually. (Or be hardcore and make them manually! The choice is yours.) For the moment, don't worry about how the non-profit gets paid - we'll get to that.
-
+####Future Additions:
+-----
 * Now, non-profits want the option to have their donors opt for monthly donations. Use Stripe subscriptions to bill their card for $15 per month if they choose monthly donations.
 
 * Not everyone wants to donate $15/month. Let non-profits create different donation tiers by adding subscriptions. Hint: A non-profit has many subscriptions.
